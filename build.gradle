@@ -20,6 +20,7 @@ buildConfig {
 
 dependencies {
     implementation 'com.qcloud:vod_api:2.1.4'
+    implementation 'com.tencentcloudapi:tencentcloud-sdk-java:3.1.389'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt'
 
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
