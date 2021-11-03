@@ -1,0 +1,38 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id 'com.github.gmazzo.buildconfig' version '3.0.3'
+}
+
+group = 'tw.nolions'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+buildConfig {
+    buildConfigField('String', 'VOD_SECRET_ID', "\"${VOD_SECRET_ID}\"")
+    buildConfigField('String', 'VOD_SECRET_KEY', "\"${VOD_SECRET_KEY}\"")
+    buildConfigField('String', 'VOD_PROCEDURE', "\"${VOD_PROCEDURE}\"")
+    buildConfigField('String', 'VOD_REGION', "\"${VOD_REGION}\"")
+    buildConfigField('Long', 'VOD_SUB_APP_ID', "${VOD_SUB_APP_ID}")
+}
+
+dependencies {
+    implementation 'com.qcloud:vod_api:2.1.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt'
+
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+}
+
+test {
+    useJUnit()
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
