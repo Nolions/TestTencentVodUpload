@@ -13,3 +13,12 @@ cp ./example.gradle.properties ./gradle.properties
 | VOD_REGION | 雲點播影片儲存區域 |
 | VOD_PROCEDURE | 雲點播影片上傳任務流 |
 | VOD_SUB_APP_ID | 雲點播子應用 ID。 |
+
+## Features
+
+- [x] 上傳影片
+- [x] 刪除影片
+
+TODO
+
+[comment]: <> (- [ ] json改用msgp)
